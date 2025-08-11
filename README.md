@@ -88,6 +88,8 @@ timer/
 ├── jest.setup.js       # Configuração do Jest
 ├── package.json        # Configuração do projeto
 ├── .gitignore          # Arquivos ignorados
+├── CNAME               # Configuração de domínio personalizado
+├── LICENSE.MD          # Licença MIT
 ├── .github/
 │   └── FUNDING.yml     # Configuração de sponsors
 ├── README.md           # Documentação principal
@@ -112,7 +114,7 @@ Contribuições são bem-vindas! Para contribuir:
 
 ## 📄 Licença
 
-MIT License - veja o arquivo LICENSE para detalhes.
+MIT License - veja o arquivo [LICENSE.MD](./LICENSE.MD) para detalhes.
 
 ---
 
