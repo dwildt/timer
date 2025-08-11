@@ -23,7 +23,10 @@ https://www.youtube.com/playlist?list=PLAYLIST_ID
 https://music.youtube.com/playlist?list=PLAYLIST_ID
 ```
 
-A playlist padrão é otimizada para sessões de trabalho e estudo.
+**Playlist padrão (exemplo):**  
+[🎧 Focus Music Playlist](https://music.youtube.com/playlist?list=PL3aez-om6Dc0dRnPzyQkApCwiEYITBuSR&si=S3pX1vKw-Lztk3vC)
+
+*Esta playlist de exemplo é otimizada para sessões de trabalho e estudo. Você pode substituí-la por qualquer playlist de sua preferência.*
 
 ## 🧪 Testes
 
