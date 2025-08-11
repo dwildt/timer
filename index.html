@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer - Wildtech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="timer-section">
+            <div class="timer-display">
+                <span id="minutes">00</span>:<span id="seconds">00</span>
+            </div>
+            <div class="controls">
+                <div class="preset-buttons">
+                    <button class="preset-btn" data-time="180">3 min</button>
+                    <button class="preset-btn" data-time="300">5 min</button>
+                    <button class="preset-btn" data-time="1500">25 min</button>
+                    <button class="preset-btn" data-time="3600">60 min</button>
+                </div>
+                <div class="custom-time">
+                    <input type="number" id="custom-minutes" placeholder="Min" min="1" max="999">
+                    <input type="number" id="custom-seconds" placeholder="Seg" min="0" max="59">
+                    <button id="set-custom">Definir</button>
+                </div>
+                <div class="timer-controls">
+                    <button id="start-btn">Iniciar</button>
+                    <button id="pause-btn" disabled>Pausar</button>
+                    <button id="reset-btn">Resetar</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <div class="youtube-section">
+                <div class="youtube-controls">
+                    <input type="text" id="youtube-url" placeholder="Playlist padrão carregada - Cole outro URL para trocar...">
+                    <button id="load-playlist">Carregar Playlist</button>
+                </div>
+                <div id="youtube-player"></div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>
+                🚀 Projeto disponível no <a href="https://github.com/dwildt/timer" target="_blank">GitHub</a> |
+                ❤️ Apoie este projeto: <a href="https://github.com/sponsors/dwildt" target="_blank">GitHub Sponsors</a> |
+                <a href="https://patreon.com/dwildt" target="_blank">Patreon</a> |
+                <a href="https://apoia.se/dwildt" target="_blank">Apoia.se</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="timer.js"></script>
+</body>
+</html>

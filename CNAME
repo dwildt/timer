@@ -1,0 +1,15 @@
+timer.danielwildt.com.br
+
+# Configuração do DNS:
+# Nome/Host: timer
+# Tipo: CNAME  
+# Valor/Destino: dwildt.github.io
+# TTL: 300 (ou padrão)
+#
+# No GitHub Settings > Pages:
+# Custom domain: timer.danielwildt.com.br
+# Enforce HTTPS: habilitado
+#
+# URLs funcionais:
+# - GitHub Pages: https://dwildt.github.io/timer/
+# - Domínio personalizado: https://timer.danielwildt.com.br/
