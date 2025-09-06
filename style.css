@@ -28,27 +28,28 @@ body {
 }
 
 .timer-display {
-    font-size: 20vw;
+    font-size: 25vw;
     font-weight: bold;
     margin-bottom: 2rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     line-height: 1;
-    width: 80vw;
+    width: calc(100vw - 2rem);
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
 @media (max-width: 768px) {
     .timer-display {
-        font-size: 18vw;
-        width: 90vw;
+        font-size: 22vw;
+        width: calc(100vw - 2rem);
     }
 }
 
 @media (max-width: 480px) {
     .timer-display {
-        font-size: 16vw;
-        width: 95vw;
+        font-size: 20vw;
+        width: calc(100vw - 2rem);
     }
 }
 

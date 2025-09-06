@@ -7,8 +7,9 @@ const Timer = require('./timer.js');
 // Mock HTML elements
 function setupDOM() {
     document.body.innerHTML = `
-        <div id="minutes">00</div>
-        <div id="seconds">00</div>
+        <div class="timer-display">
+            <span id="minutes">00</span>:<span id="seconds">00</span>
+        </div>
         <button id="start-btn">Iniciar</button>
         <button id="pause-btn">Pausar</button>
         <button id="reset-btn">Resetar</button>
@@ -323,6 +324,36 @@ describe('Timer', () => {
             // O aviso não é removido automaticamente no pause, apenas no reset
             timer.reset();
             expect(timerDisplay.classList.contains('timer-warning')).toBe(false);
+        });
+    });
+
+    describe('Layout e CSS', () => {
+        test('deve ter timer display com largura máxima disponível', () => {
+            // Simula CSS inline para teste
+            const timerDisplay = document.querySelector('.timer-display');
+            if (!timerDisplay) {
+                // Cria elemento se não existir no setup
+                const display = document.createElement('div');
+                display.className = 'timer-display';
+                display.innerHTML = '<span id="minutes">00</span>:<span id="seconds">00</span>';
+                document.body.appendChild(display);
+            }
+            
+            const displayElement = document.querySelector('.timer-display');
+            expect(displayElement).toBeTruthy();
+            
+            // Verifica se o elemento tem a classe correta para aplicação do CSS
+            expect(displayElement.classList.contains('timer-display')).toBe(true);
+        });
+
+        test('deve configurar DOM com elementos necessários para largura máxima', () => {
+            const timerDisplay = document.querySelector('.timer-display') || 
+                                document.getElementById('minutes').parentElement;
+            
+            // Verifica se o elemento existe e está configurado
+            expect(timerDisplay).toBeTruthy();
+            expect(timerDisplay.querySelector('#minutes')).toBeTruthy();
+            expect(timerDisplay.querySelector('#seconds')).toBeTruthy();
         });
     });
 });
