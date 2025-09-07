@@ -28,7 +28,7 @@ body {
 }
 
 .timer-display {
-    font-size: 25vw;
+    font-size: 35vw;
     font-weight: bold;
     margin-bottom: 2rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -41,14 +41,14 @@ body {
 
 @media (max-width: 768px) {
     .timer-display {
-        font-size: 22vw;
+        font-size: 30vw;
         width: calc(100vw - 2rem);
     }
 }
 
 @media (max-width: 480px) {
     .timer-display {
-        font-size: 20vw;
+        font-size: 25vw;
         width: calc(100vw - 2rem);
     }
 }
