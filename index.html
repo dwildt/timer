@@ -12,6 +12,12 @@
             <div class="timer-display">
                 <span id="minutes">00</span>:<span id="seconds">00</span>
             </div>
+            <button id="toggle-controls" class="toggle-btn">⚙️</button>
+            <div class="timer-controls">
+                <button id="start-btn">Iniciar</button>
+                <button id="pause-btn" disabled>Pausar</button>
+                <button id="reset-btn">Resetar</button>
+            </div>
             <div class="controls">
                 <div class="preset-buttons">
                     <button class="preset-btn" data-time="180">3 min</button>
@@ -23,11 +29,6 @@
                     <input type="number" id="custom-minutes" placeholder="Min" min="1" max="999">
                     <input type="number" id="custom-seconds" placeholder="Seg" min="0" max="59">
                     <button id="set-custom">Definir</button>
-                </div>
-                <div class="timer-controls">
-                    <button id="start-btn">Iniciar</button>
-                    <button id="pause-btn" disabled>Pausar</button>
-                    <button id="reset-btn">Resetar</button>
                 </div>
             </div>
         </header>

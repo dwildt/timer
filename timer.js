@@ -23,6 +23,9 @@ class Timer {
         this.youtubeUrl = document.getElementById('youtube-url');
         this.loadPlaylistBtn = document.getElementById('load-playlist');
         this.youtubePlayer = document.getElementById('youtube-player');
+        this.toggleControlsBtn = document.getElementById('toggle-controls');
+        this.timerControls = document.querySelector('.timer-controls');
+        this.controls = document.querySelector('.controls');
     }
     
     initEventListeners() {
@@ -40,6 +43,9 @@ class Timer {
         }
         if (this.loadPlaylistBtn) {
             this.loadPlaylistBtn.addEventListener('click', () => this.loadYouTubePlaylist());
+        }
+        if (this.toggleControlsBtn) {
+            this.toggleControlsBtn.addEventListener('click', () => this.toggleControls());
         }
         
         if (this.presetButtons) {
@@ -59,6 +65,17 @@ class Timer {
                 if (e.key === 'Enter') this.setCustomTime();
             });
         }
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Space') {
+                e.preventDefault();
+                if (this.isRunning) {
+                    this.pause();
+                } else {
+                    this.start();
+                }
+            }
+        });
         
         if (this.youtubeUrl) {
             this.youtubeUrl.addEventListener('keypress', (e) => {
@@ -242,6 +259,13 @@ class Timer {
     removeWarningEffect() {
         if (this.minutesDisplay && this.minutesDisplay.parentElement) {
             this.minutesDisplay.parentElement.classList.remove('timer-warning');
+        }
+    }
+    
+    toggleControls() {
+        if (this.timerControls && this.controls) {
+            this.timerControls.classList.toggle('collapsed');
+            this.controls.classList.toggle('collapsed');
         }
     }
     

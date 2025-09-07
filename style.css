@@ -56,6 +56,15 @@ body {
 .controls {
     max-width: 800px;
     margin: 0 auto;
+    max-height: 500px;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.3s ease;
+    opacity: 1;
+}
+
+.controls.collapsed {
+    max-height: 0;
+    opacity: 0;
 }
 
 .preset-buttons {
@@ -136,6 +145,17 @@ body {
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 3rem;
+    max-height: 500px;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.3s ease;
+    opacity: 1;
+}
+
+.timer-controls.collapsed {
+    max-height: 0;
+    opacity: 0;
+    margin-bottom: 0;
 }
 
 .timer-controls button {
@@ -267,6 +287,24 @@ button:disabled {
 .footer p {
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.9);
+}
+
+.toggle-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 1rem auto 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-btn:hover {
+    transform: scale(1.2);
+    opacity: 0.7;
 }
 
 .footer a {
