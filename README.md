@@ -2,6 +2,10 @@
 
 Um timer moderno e funcional com interface fullscreen, desenvolvido com JavaScript vanilla, usando as cores da Wildtech.
 
+## 🌐 Demonstração
+
+🚀 **[Acesse o Timer Online](https://dwildt.github.io/timer)**
+
 ## 🚀 Funcionalidades
 
 - **Timer Pomodoro**: Inicializa automaticamente com 25 minutos (técnica Pomodoro)
